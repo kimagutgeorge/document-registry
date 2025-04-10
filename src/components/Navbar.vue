@@ -158,13 +158,13 @@
             <transition name="slide-fade">
                 <div v-if="activeDropdown === 'users' " class="row flex-no-wrap p-2">
                     <li class="ms-4 mt-2 col-8 ">
-                        <router-link to="#" class="text-third flex-no-wrap">
-                            <span class="custom-fw-lighter">All Users</span>
+                        <router-link to="/users" class="text-third flex-no-wrap">
+                            <span class="custom-fw-lighter f-14">All Users</span>
                         </router-link> 
                     </li>
                     <li class="ms-4 mt-4 col-8 ">
-                        <router-link to="#" class="text-third flex-no-wrap">
-                            <span class="custom-fw-lighter">Add User</span>
+                        <router-link to="/users/add" class="text-third flex-no-wrap">
+                            <span class="custom-fw-lighter f-14">Add User</span>
                         </router-link> 
                     </li>
                 </div>

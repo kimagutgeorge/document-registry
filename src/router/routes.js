@@ -10,6 +10,9 @@ import AuditLogs from '@/views/Logs.vue';
 import DocumentReports from '@/views/reports/DocumentReports.vue'
 import UserActivityReports from '@/views/reports/UserActivityReports.vue'
 import RequestDocuments from '@/views/reports/RequestReports.vue';
+import ReturnIssuance from '@/views/reports/ReturnIssuanceReports.vue';
+import AllUsers from '@/views/Users.vue';
+import AddUser from '@/views/AddUser.vue';
 
 
 export default [
@@ -76,6 +79,21 @@ export default [
           path: '/reports/requests',
           name: 'RequestDocuments',
           component: RequestDocuments
+        },
+        {
+          path: '/reports/issuance-returns',
+          name: 'ReturnIssuance',
+          component: ReturnIssuance
+        },
+        {
+          path: '/users',
+          name: 'AllUsers',
+          component: AllUsers
+        },
+        {
+          path: '/users/add',
+          name: 'AddUser',
+          component: AddUser
         }
       ],
     },

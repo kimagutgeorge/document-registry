@@ -106,7 +106,7 @@
 
 </template>
 <script>
-import PageTitle from '@/components/PageTitle.vue';
+import PageTitle from '@/components/titles/PageTitle.vue';
 import { Line, Pie } from 'vue-chartjs'
 import {
   Chart as ChartJS,

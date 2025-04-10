@@ -55,7 +55,7 @@
     </div>
     </template>
     <script>
-    import PageTitle from '@/components/PageTitle.vue';
+    import PageTitle from '@/components/titles/PageTitle.vue';
     export default{
         name: "AuditLogs",
         components: { PageTitle}

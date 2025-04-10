@@ -4,7 +4,7 @@
         <PageTitle page_name="Documents" child_page_name=" / Add Documents"/>
     </div>
     <div class="card w-100 d-flex w-100 p-4 mt-2 no-border position-relative">
-        <li class="text-dark px-2 custom-fw-bold f-14 sm-title mt-2">Add Documents</li>
+        <SubTitle title="Add Documents"/>
         <form class="row d-flex">
             <div class="col-6 p-4">
                 <div class="form-group w-75 mt-4">
@@ -72,9 +72,10 @@
     <script>
     import PageTitle from '@/components/titles/PageTitle.vue';
     import ActionResponse from '@/components/Response.vue'
+import SubTitle from '@/components/titles/SubTitle.vue';
     export default{
-        name: "AddDocument",
-        components: { PageTitle, ActionResponse}
+        name: "AddUser",
+        components: { PageTitle, ActionResponse, SubTitle}
     }
       
     </script>
