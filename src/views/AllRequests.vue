@@ -113,6 +113,42 @@
                           Action
                         </button>
                         <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Request</a>
+                          <a class="dropdown-item" href="#">Approve <i class="fa-solid fa-check text-white"></i></a>
+                          <a class="dropdown-item" href="#">Reject <i class="fa-solid fa-danger text-white"></i></a>
+                        </div>
+                      </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Document twenty</td>
+                <td>John Doe</td>
+                <td>Apr 5</td>
+                <td><i class="fa-solid fa-download"></i></td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Action
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" href="#">Request</a>
+                          <a class="dropdown-item" href="#">Approve <i class="fa-solid fa-check text-white"></i></a>
+                          <a class="dropdown-item" href="#">Reject <i class="fa-solid fa-danger text-white"></i></a>
+                        </div>
+                      </div>
+                </td>
+              </tr>
+              <tr>
+                <td>Document twenty</td>
+                <td>John Doe</td>
+                <td>Apr 5</td>
+                <td><i class="fa-solid fa-download"></i></td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Action
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
                           <a class="dropdown-item" href="#">Approve <i class="fa-solid fa-check text-white"></i></a>
                           <a class="dropdown-item" href="#">Reject <i class="fa-solid fa-danger text-white"></i></a>
                         </div>

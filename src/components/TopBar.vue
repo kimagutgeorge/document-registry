@@ -85,7 +85,7 @@ export default{
     },
     methods: {
         toggleDropdown(){
-            this.activeDropdown = !this.activeDropdown
+            // this.activeDropdown = !this.activeDropdown
         },
         toggleUserDropdown(){
             this.activeUserDropdown = !this.activeUserDropdown

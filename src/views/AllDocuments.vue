@@ -81,6 +81,126 @@
                       </div>
                 </td>
               </tr>
+              <tr>
+                <th scope="row">122/3</th>
+                <td>Title deed</td>
+                <td>Docuent 20</td>
+                <td>First time</td>
+                <td><span class="status-check bg-primary text-white f-15">Issued</span></td>
+                <td>Apr 4</td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Action
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">View <i class="fa-solid fa-eye text-white"></i></a>
+                          <a class="dropdown-item" href="#">Return <i class="fa-solid fa-check text-white"></i></a>
+                          <a class="dropdown-item" href="#">Delete <i class="fa-solid fa-trash text-danger"></i></a>
+                        </div>
+                      </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">122/3</th>
+                <td>Title deed</td>
+                <td>Docuent 20</td>
+                <td>First time</td>
+                <td><span class="status-check bg-primary text-white f-15">Issued</span></td>
+                <td>Apr 4</td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Action
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">View <i class="fa-solid fa-eye text-white"></i></a>
+                          <a class="dropdown-item" href="#">Return <i class="fa-solid fa-check text-white"></i></a>
+                          <a class="dropdown-item" href="#">Delete <i class="fa-solid fa-trash text-danger"></i></a>
+                        </div>
+                      </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">122/3</th>
+                <td>Title deed</td>
+                <td>Docuent 20</td>
+                <td>First time</td>
+                <td><span class="status-check bg-primary text-white f-15">Issued</span></td>
+                <td>Apr 4</td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Action
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">View <i class="fa-solid fa-eye text-white"></i></a>
+                          <a class="dropdown-item" href="#">Return <i class="fa-solid fa-check text-white"></i></a>
+                          <a class="dropdown-item" href="#">Delete <i class="fa-solid fa-trash text-danger"></i></a>
+                        </div>
+                      </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">122/3</th>
+                <td>Title deed</td>
+                <td>Docuent 20</td>
+                <td>First time</td>
+                <td><span class="status-check bg-primary text-white f-15">Issued</span></td>
+                <td>Apr 4</td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Action
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">View <i class="fa-solid fa-eye text-white"></i></a>
+                          <a class="dropdown-item" href="#">Return <i class="fa-solid fa-check text-white"></i></a>
+                          <a class="dropdown-item" href="#">Delete <i class="fa-solid fa-trash text-danger"></i></a>
+                        </div>
+                      </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">122/3</th>
+                <td>Title deed</td>
+                <td>Docuent 20</td>
+                <td>First time</td>
+                <td><span class="status-check bg-primary text-white f-15">Issued</span></td>
+                <td>Apr 4</td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Action
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">View <i class="fa-solid fa-eye text-white"></i></a>
+                          <a class="dropdown-item" href="#">Return <i class="fa-solid fa-check text-white"></i></a>
+                          <a class="dropdown-item" href="#">Delete <i class="fa-solid fa-trash text-danger"></i></a>
+                        </div>
+                      </div>
+                </td>
+              </tr>
+              <tr>
+                <th scope="row">122/3</th>
+                <td>Title deed</td>
+                <td>Docuent 20</td>
+                <td>First time</td>
+                <td><span class="status-check bg-primary text-white f-15">Issued</span></td>
+                <td>Apr 4</td>
+                <td>
+                    <div class="dropdown">
+                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                          Action
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                          <a class="dropdown-item" href="#">View <i class="fa-solid fa-eye text-white"></i></a>
+                          <a class="dropdown-item" href="#">Return <i class="fa-solid fa-check text-white"></i></a>
+                          <a class="dropdown-item" href="#">Delete <i class="fa-solid fa-trash text-danger"></i></a>
+                        </div>
+                      </div>
+                </td>
+              </tr>
             </tbody>
           </table>
     </div>

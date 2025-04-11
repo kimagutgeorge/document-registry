@@ -50,6 +50,66 @@
                 <td  class="f-15" >Document checked and cleared</td>
                 <td  class="f-15" ><button class="btn btn-primary f-15">View</button> </td>
               </tr>
+              <tr>
+                <td  class="f-15" >Log book</td>
+                <td  class="f-15" >8892-KAP-DP</td>
+                <td  class="f-15" >Jane W.</td>
+                <td  class="f-15" >Registration Office</td>
+                <td  class="f-15" >10/4/2025 15:11</td>
+                <td  class="f-15" >Approved</td>
+                <td  class="f-15" >Document checked and cleared</td>
+                <td  class="f-15" ><button class="btn btn-primary f-15">View</button> </td>
+              </tr>
+              <tr>
+                <td  class="f-15" >Log book</td>
+                <td  class="f-15" >8892-KAP-DP</td>
+                <td  class="f-15" >Jane W.</td>
+                <td  class="f-15" >Registration Office</td>
+                <td  class="f-15" >10/4/2025 15:11</td>
+                <td  class="f-15" >Approved</td>
+                <td  class="f-15" >Document checked and cleared</td>
+                <td  class="f-15" ><button class="btn btn-primary f-15">View</button> </td>
+              </tr>
+              <tr>
+                <td  class="f-15" >Log book</td>
+                <td  class="f-15" >8892-KAP-DP</td>
+                <td  class="f-15" >Jane W.</td>
+                <td  class="f-15" >Registration Office</td>
+                <td  class="f-15" >10/4/2025 15:11</td>
+                <td  class="f-15" >Approved</td>
+                <td  class="f-15" >Document checked and cleared</td>
+                <td  class="f-15" ><button class="btn btn-primary f-15">View</button> </td>
+              </tr>
+              <tr>
+                <td  class="f-15" >Log book</td>
+                <td  class="f-15" >8892-KAP-DP</td>
+                <td  class="f-15" >Jane W.</td>
+                <td  class="f-15" >Registration Office</td>
+                <td  class="f-15" >10/4/2025 15:11</td>
+                <td  class="f-15" >Approved</td>
+                <td  class="f-15" >Document checked and cleared</td>
+                <td  class="f-15" ><button class="btn btn-primary f-15">View</button> </td>
+              </tr>
+              <tr>
+                <td  class="f-15" >Log book</td>
+                <td  class="f-15" >8892-KAP-DP</td>
+                <td  class="f-15" >Jane W.</td>
+                <td  class="f-15" >Registration Office</td>
+                <td  class="f-15" >10/4/2025 15:11</td>
+                <td  class="f-15" >Approved</td>
+                <td  class="f-15" >Document checked and cleared</td>
+                <td  class="f-15" ><button class="btn btn-primary f-15">View</button> </td>
+              </tr>
+              <tr>
+                <td  class="f-15" >Log book</td>
+                <td  class="f-15" >8892-KAP-DP</td>
+                <td  class="f-15" >Jane W.</td>
+                <td  class="f-15" >Registration Office</td>
+                <td  class="f-15" >10/4/2025 15:11</td>
+                <td  class="f-15" >Approved</td>
+                <td  class="f-15" >Document checked and cleared</td>
+                <td  class="f-15" ><button class="btn btn-primary f-15">View</button> </td>
+              </tr>
             </tbody>
           </table>
     </div>
