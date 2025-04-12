@@ -37,141 +37,22 @@
                 <td>Apr 5</td>
                 <td><i class="fa-solid fa-download"></i></td>
                 <td>
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Action
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Approve <i class="fa-solid fa-check text-white"></i></a>
-                          <a class="dropdown-item" href="#">Reject <i class="fa-solid fa-danger text-white"></i></a>
-                        </div>
-                      </div>
+                  <ActionButton 
+                  :dropdown_actions="{
+                    approve: {
+                      action: () => viewItem(itemId),
+                      iconClass: 'text-primary'
+                    },
+                    reject: {
+                      action: () => editItem(itemId),
+                      iconClass: 'text-danger'
+                    }
+                  }"
+                />
+                    
                 </td>
               </tr>
-              <tr>
-                <td>Document twenty</td>
-                <td>John Doe</td>
-                <td>Apr 5</td>
-                <td><i class="fa-solid fa-download"></i></td>
-                <td>
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Action
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Request</a>
-                          <a class="dropdown-item" href="#">Approve <i class="fa-solid fa-check text-white"></i></a>
-                          <a class="dropdown-item" href="#">Reject <i class="fa-solid fa-danger text-white"></i></a>
-                        </div>
-                      </div>
-                </td>
-              </tr>
-              <tr>
-                <td>Document twenty</td>
-                <td>John Doe</td>
-                <td>Apr 5</td>
-                <td><i class="fa-solid fa-download"></i></td>
-                <td>
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Action
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Request</a>
-                          <a class="dropdown-item" href="#">Approve <i class="fa-solid fa-check text-white"></i></a>
-                          <a class="dropdown-item" href="#">Reject <i class="fa-solid fa-danger text-white"></i></a>
-                        </div>
-                      </div>
-                </td>
-              </tr>
-              <tr>
-                <td>Document twenty</td>
-                <td>John Doe</td>
-                <td>Apr 5</td>
-                <td><i class="fa-solid fa-download"></i></td>
-                <td>
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Action
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Request</a>
-                          <a class="dropdown-item" href="#">Approve <i class="fa-solid fa-check text-white"></i></a>
-                          <a class="dropdown-item" href="#">Reject <i class="fa-solid fa-danger text-white"></i></a>
-                        </div>
-                      </div>
-                </td>
-              </tr>
-              <tr>
-                <td>Document twenty</td>
-                <td>John Doe</td>
-                <td>Apr 5</td>
-                <td><i class="fa-solid fa-download"></i></td>
-                <td>
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Action
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Request</a>
-                          <a class="dropdown-item" href="#">Approve <i class="fa-solid fa-check text-white"></i></a>
-                          <a class="dropdown-item" href="#">Reject <i class="fa-solid fa-danger text-white"></i></a>
-                        </div>
-                      </div>
-                </td>
-              </tr>
-              <tr>
-                <td>Document twenty</td>
-                <td>John Doe</td>
-                <td>Apr 5</td>
-                <td><i class="fa-solid fa-download"></i></td>
-                <td>
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Action
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                            <a class="dropdown-item" href="#">Request</a>
-                          <a class="dropdown-item" href="#">Approve <i class="fa-solid fa-check text-white"></i></a>
-                          <a class="dropdown-item" href="#">Reject <i class="fa-solid fa-danger text-white"></i></a>
-                        </div>
-                      </div>
-                </td>
-              </tr>
-              <tr>
-                <td>Document twenty</td>
-                <td>John Doe</td>
-                <td>Apr 5</td>
-                <td><i class="fa-solid fa-download"></i></td>
-                <td>
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Action
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Approve <i class="fa-solid fa-check text-white"></i></a>
-                          <a class="dropdown-item" href="#">Reject <i class="fa-solid fa-danger text-white"></i></a>
-                        </div>
-                      </div>
-                </td>
-              </tr>
-              <tr>
-                <td>Document twenty</td>
-                <td>John Doe</td>
-                <td>Apr 5</td>
-                <td><i class="fa-solid fa-download nav-item"></i></td>
-                <td>
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Action
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">Approve <i class="fa-solid fa-check text-white"></i></a>
-                          <a class="dropdown-item" href="#">Reject <i class="fa-solid fa-danger text-white"></i></a>
-                        </div>
-                      </div>
-                </td>
-              </tr>
+              
               
             </tbody>
           </table>
@@ -179,9 +60,10 @@
     </template>
     <script>
     import PageTitle from '@/components/titles/PageTitle.vue';
+    import ActionButton from '@/components/buttons/ActionButton.vue';
     export default{
         name: "AllRequests",
-        components: { PageTitle}
+        components: { PageTitle, ActionButton}
     }
       
     </script>

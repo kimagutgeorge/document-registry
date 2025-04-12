@@ -54,6 +54,9 @@ li{
 .bg-third{
     background-color: #E9ECEE;
 }
+.nav-bar-inner .nav-bar a.row.bg-third{
+    border-right-color: #2E5AEF;
+}
 .form-control,
 .btn{
     border-radius: 0px !important;
@@ -101,8 +104,7 @@ li{
 .nav-bar{
     border-left: 1px solid #DBDBDB;
     border-right: 1px solid #DBDBDB;
-    border-radius: 5px;
-    height: 89vh;
+    height: 90vh;
 }
 .custom-fw-bold{
     font-weight: 600 !important;
@@ -342,5 +344,17 @@ li{
   }
   .custom-dropdown-holder{
     z-index: 5;
-    box-shadow: 0px 0px 4px #737780;
+  }
+  .nav-bar-inner .nav-bar a.row,
+  .nav-bar-inner .nav-bar .nav-drop-down{
+    width: 100%;
+    border-right: 3px solid transparent;
+    margin-left: 0px !important;
+  }
+  .nav-bar-inner .nav-bar .row.flex-no-wrap a.row{
+    width: calc(100% - 4px);
+  }
+  .nav-bar-inner .nav-bar .p-2{
+    padding-top: 4px !important;
+    padding-bottom: 7px !important;
   }

@@ -4,11 +4,11 @@
         Action <i class="fa-solid fa-angle-down"></i>
       </span>
       <transition name="slide-fade">
-        <div v-if="activeDropdown" class="custom-dropdown-holder d-block bg-primary position-absolute p-2 mt-2">
+        <div v-if="activeDropdown" class="custom-dropdown-holder d-block bg-white card position-absolute p-2 mt-2">
           <a 
             v-for="(action, name) in dropdown_actions" 
             :key="name"
-            class="custom-dropdown-item text-white col-12 d-block" 
+            class="custom-dropdown-item text-secondary col-12 d-block" 
             href="#"
             @click.prevent="triggerAction(name)"
           >
@@ -37,14 +37,16 @@
         activeDropdown: false,
         iconMappings: {
           view: 'fa-eye',
-          edit: 'fa-pen',
+          edit: 'fa-pen-to-square',
           return: 'fa-check',
           delete: 'fa-trash',
           download: 'fa-download',
           print: 'fa-print',
           share: 'fa-share',
           archive: 'fa-box-archive',
-          default: 'fa-circle'
+          default: 'fa-circle',
+          reject: 'fa-circle-xmark',
+          approve: 'fa-check'
         }
       }
     },

@@ -27,16 +27,22 @@
                 <td class="f-14">{{ user.dep }}</td>
                 <td class="f-14">{{ user.status }}</td>
                 <td class="f-14">
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Action
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">View <i class="fa-solid fa-eye text-white"></i></a>
-                          <a class="dropdown-item" href="#">Edit <i class="fa-solid fa-edit text-white"></i></a>
-                          <a class="dropdown-item" href="#">Delete <i class="fa-solid fa-trash text-danger"></i></a>
-                        </div>
-                      </div>
+                    <ActionButton 
+                  :dropdown_actions="{
+                    view: {
+                      action: () => viewItem(itemId),
+                      iconClass: 'text-primary'
+                    },
+                    edit: {
+                      action: () => editItem(itemId),
+                      iconClass: 'text-primary'
+                    },
+                    delete: {
+                      action: () => deleteItem(itemId),
+                      iconClass: 'text-danger'
+                    }
+                  }"
+                />
                 </td>
               </tr>
             </tbody>
@@ -44,11 +50,12 @@
     </div>
     </template>
     <script>
-    import PageTitle from '@/components/titles/PageTitle.vue';
+    import ActionButton from '@/components/buttons/ActionButton.vue';
+import PageTitle from '@/components/titles/PageTitle.vue';
 import SubTitle from '@/components/titles/SubTitle.vue';
     export default{
         name: "AllUsers",
-        components: { PageTitle, SubTitle},
+        components: { PageTitle, SubTitle, ActionButton},
         data(){
             return{
                 users: [
