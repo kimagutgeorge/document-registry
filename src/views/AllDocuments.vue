@@ -29,16 +29,22 @@
                 <td><i class="fa-solid fa-check status-check bg-primary text-white"></i></td>
                 <td>Apr 3</td>
                 <td>
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Action
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">View <i class="fa-solid fa-eye text-white"></i></a>
-                          <a class="dropdown-item" href="#">Return <i class="fa-solid fa-check text-white"></i></a>
-                          <a class="dropdown-item" href="#">Delete <i class="fa-solid fa-trash text-danger"></i></a>
-                        </div>
-                      </div>
+                  <ActionButton 
+                  :dropdown_actions="{
+                    view: {
+                      action: () => viewItem(itemId),
+                      iconClass: 'text-white'
+                    },
+                    return: {
+                      action: () => editItem(itemId),
+                      iconClass: 'text-white'
+                    },
+                    delete: {
+                      action: () => deleteItem(itemId),
+                      iconClass: 'text-danger'
+                    }
+                  }"
+                />
                 </td>
               </tr>
               <tr>
@@ -49,16 +55,7 @@
                 <td><span class="status-check bg-primary text-white f-15">Issued</span></td>
                 <td>Apr 5</td>
                 <td>
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Action
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">View <i class="fa-solid fa-eye text-white"></i></a>
-                          <a class="dropdown-item" href="#">Return <i class="fa-solid fa-check text-white"></i></a>
-                          <a class="dropdown-item" href="#">Delete <i class="fa-solid fa-trash text-danger"></i></a>
-                        </div>
-                      </div>
+                    
                 </td>
               </tr>
               <tr>
@@ -69,16 +66,7 @@
                 <td><span class="status-check bg-primary text-white f-15">Issued</span></td>
                 <td>Apr 4</td>
                 <td>
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Action
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">View <i class="fa-solid fa-eye text-white"></i></a>
-                          <a class="dropdown-item" href="#">Return <i class="fa-solid fa-check text-white"></i></a>
-                          <a class="dropdown-item" href="#">Delete <i class="fa-solid fa-trash text-danger"></i></a>
-                        </div>
-                      </div>
+                   
                 </td>
               </tr>
               <tr>
@@ -89,16 +77,7 @@
                 <td><span class="status-check bg-primary text-white f-15">Issued</span></td>
                 <td>Apr 4</td>
                 <td>
-                    <div class="dropdown">
-                        <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                          Action
-                        </button>
-                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
-                          <a class="dropdown-item" href="#">View <i class="fa-solid fa-eye text-white"></i></a>
-                          <a class="dropdown-item" href="#">Return <i class="fa-solid fa-check text-white"></i></a>
-                          <a class="dropdown-item" href="#">Delete <i class="fa-solid fa-trash text-danger"></i></a>
-                        </div>
-                      </div>
+                   
                 </td>
               </tr>
               <tr>
@@ -206,10 +185,11 @@
     </div>
     </template>
     <script>
-    import PageTitle from '@/components/titles/PageTitle.vue';
+    import ActionButton from '@/components/buttons/ActionButton.vue';
+import PageTitle from '@/components/titles/PageTitle.vue';
     export default{
         name: "AllDocuments",
-        components: { PageTitle}
+        components: { PageTitle, ActionButton}
     }
       
     </script>

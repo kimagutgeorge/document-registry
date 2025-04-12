@@ -1,7 +1,7 @@
 <template>
 
     <div class="row d-flex px-2 no-margin">
-        <PageTitle page_name="Add User" />
+        <PageTitle page_name="Users" child_page_name=" / Add user"/>
     </div>
     <div class="card w-100 d-flex w-100 p-4 mt-2 no-border position-relative">
         <SubTitle title="Add User"/>
