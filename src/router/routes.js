@@ -13,6 +13,8 @@ import RequestDocuments from '@/views/reports/RequestReports.vue';
 import ReturnIssuance from '@/views/reports/ReturnIssuanceReports.vue';
 import AllUsers from '@/views/Users.vue';
 import AddUser from '@/views/AddUser.vue';
+import UserRoles  from '@/views/Roles.vue';
+import UserDepartments  from '@/views/Departments.vue';
 
 
 export default [
@@ -94,7 +96,18 @@ export default [
           path: '/users/add',
           name: 'AddUser',
           component: AddUser
-        }
+        },
+        {
+          path: '/settings/roles',
+          name: 'Roles',
+          component: UserRoles
+        },
+        {
+          path: '/settings/departments',
+          name: 'Roles',
+          component: UserDepartments
+        },
+        
       ],
     },
 ];

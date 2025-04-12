@@ -35,8 +35,8 @@ export default{
                 
             },
         login(){
-        this.$store.commit('setLoginState', true);
-        this.$store.dispatch('login');
+        // this.$store.commit('setLoginState', true);
+        // this.$store.dispatch('login');
         }
     }
 }

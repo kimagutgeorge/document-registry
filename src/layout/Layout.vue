@@ -23,10 +23,15 @@
   
   export default {
     name: 'PageLayout',
+    data() {
+      return {
+        is_logged_in: true
+      }
+    },
     computed: {
-  is_logged_in() {
-    return this.$store.state.isLoggedIn;
-  }
+  // is_logged_in() {
+  //   return this.$store.state.isLoggedIn;
+  // }
 },
     components: { NavBar, TopBar, UserLogin}
   }
