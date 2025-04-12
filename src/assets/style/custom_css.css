@@ -358,3 +358,12 @@ li{
     padding-top: 4px !important;
     padding-bottom: 7px !important;
   }
+  .nav-bar-inner .nav-bar .custom-fw-bold{
+    font-weight: 500 !important;
+  }
+  .nav-bar-inner .nav-bar .nav-item{
+    transition: 0.3s ease-in-out;
+  }
+  .nav-bar-inner .nav-bar .nav-item:hover{
+    background-color: #E9ECEE;
+  }
