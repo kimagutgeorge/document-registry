@@ -1,5 +1,6 @@
 <template>
-
+<div class=" with-max-height">
+  <div class="with-max-height-inner">
     <div class="row d-flex mx-2 no-margin">
         
         <PageTitle page_name="Users"/>
@@ -48,6 +49,8 @@
             </tbody>
           </table>
     </div>
+  </div>
+</div>
     </template>
     <script>
     import ActionButton from '@/components/buttons/ActionButton.vue';
@@ -59,6 +62,30 @@ import SubTitle from '@/components/titles/SubTitle.vue';
         data(){
             return{
                 users: [
+                    {
+                        photo: '/profiles/profile.png', 
+                        name: 'George Kimagut',
+                        email: 'geojimagut@gmail.com',
+                        role: 'Advocate',
+                        dep: 'Legal',
+                        status: 'Active',
+                    },
+                    {
+                        photo: '/profiles/profile.png', 
+                        name: 'George Kimagut',
+                        email: 'geojimagut@gmail.com',
+                        role: 'Advocate',
+                        dep: 'Legal',
+                        status: 'Active',
+                    },
+                    {
+                        photo: '/profiles/profile.png', 
+                        name: 'George Kimagut',
+                        email: 'geojimagut@gmail.com',
+                        role: 'Advocate',
+                        dep: 'Legal',
+                        status: 'Active',
+                    },
                     {
                         photo: '/profiles/profile.png', 
                         name: 'George Kimagut',

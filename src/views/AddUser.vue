@@ -1,5 +1,6 @@
 <template>
-
+    <div class=" with-max-height">
+        <div class="with-max-height-inner">
     <div class="row d-flex px-2 no-margin">
         <PageTitle page_name="Users" child_page_name=" / Add user"/>
     </div>
@@ -77,6 +78,9 @@
         </form>
         <ActionResponse message="Added successfully"/>
     </div>
+    </div>
+    </div>
+    
     </template>
     <script>
     import PageTitle from '@/components/titles/PageTitle.vue';

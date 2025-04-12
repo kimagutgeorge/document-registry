@@ -1,9 +1,10 @@
 <template>
-
+    <div class=" with-max-height">
+        <div class="with-max-height-inner">
     <div class="row d-flex px-2 no-margin">
         <PageTitle page_name="Documents" child_page_name=" / Add Documents"/>
     </div>
-    <div class="card w-100 d-flex w-100 p-4 mt-2 no-border position-relative">
+    <div class="card w-100 d-flex w-100 p-4 mt-2 no-border position-relative with-max-height">
         <li class="text-dark px-2 custom-fw-bold f-14 sm-title mt-2">Add Documents</li>
         <form class="row d-flex">
             <div class="col-6 p-4">
@@ -67,6 +68,8 @@
             </div>
         </form>
         <ActionResponse message="Added successfully"/>
+    </div>
+    </div>
     </div>
     </template>
     <script>

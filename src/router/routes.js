@@ -1,6 +1,6 @@
 import AddDocument from '@/views/AddDocument.vue';
-import AllDocuments from '@/views/AllDocuments.vue';
-import AllRequests from '@/views/AllRequests.vue';
+import AllDocuments from '@/views/Documents.vue';
+import AllRequests from '@/views/Requests.vue';
 import UserDashboard from '@/views/Dashboard.vue';
 // import UserLogin from '@/views/Login.vue';
 import DocumentIssuance from '@/views/Issuance.vue'

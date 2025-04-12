@@ -1,68 +1,65 @@
 <template>
-
+    <div class=" with-max-height">
+        <div class="with-max-height-inner">
     <div class="row d-flex mx-2 no-margin">
         
-        <PageTitle page_name="Requests"/>
+        <PageTitle page_name="Documents"/>
     </div>
     <div class="card w-100 d-flex w-100 px-2 mt-2 no-border">
-        <li class="text-dark px-2 custom-fw-bold f-14 sm-title mt-2">All Requests</li>
-        <div class="col-12 d-flex flex-row-reverse">
-            <div class="d-flex flex-no-wrap justify-content-end p-sort float-right">
-                <p class="text-secondary f-15">Sort:</p>
-            <select class=" f-15 ms-2">
-                <option>All</option>
-                <option>Pending</option>
-                <option>Approved</option>
-                <option>Rejected</option>
-            </select>
-            </div>
-            
-        </div>
+        <li class="text-dark px-2 custom-fw-bold f-14 sm-title mt-2">All Documents</li>
         <table class="table">
             <thead>
               <tr>
-                <th scope="col">Doc. Name</th>
+                <th scope="col"># File No.</th>
                 <th scope="col">
-                    Requested By
+                    Doc. Name
                 </th>
-                <th scope="col">Date Requested</th>
-                <th scope="col">Download issuance</th>
+                <th scope="col">Type</th>
+                <th scope="col">Status</th>
+                <th scope="col">In Safe</th>
+                <th scope="col">Last Movement</th>
                 <th scope="col">Action</th>
               </tr>
             </thead>
             <tbody>
               <tr>
+                <th scope="row">2024/1</th>
                 <td>Document twenty</td>
-                <td>John Doe</td>
-                <td>Apr 5</td>
-                <td><i class="fa-solid fa-download"></i></td>
+                <td>Log book</td>
+                <td>First time</td>
+                <td><i class="fa-solid fa-check status-check bg-primary text-white"></i></td>
+                <td>Apr 3</td>
                 <td>
                   <ActionButton 
                   :dropdown_actions="{
-                    approve: {
+                    view: {
                       action: () => viewItem(itemId),
                       iconClass: 'text-primary'
                     },
-                    reject: {
+                    return: {
                       action: () => editItem(itemId),
+                      iconClass: 'text-primary'
+                    },
+                    delete: {
+                      action: () => deleteItem(itemId),
                       iconClass: 'text-danger'
                     }
                   }"
                 />
-                    
                 </td>
               </tr>
-              
               
             </tbody>
           </table>
     </div>
+    </div>
+    </div>
     </template>
     <script>
-    import PageTitle from '@/components/titles/PageTitle.vue';
     import ActionButton from '@/components/buttons/ActionButton.vue';
+import PageTitle from '@/components/titles/PageTitle.vue';
     export default{
-        name: "AllRequests",
+        name: "AllDocuments",
         components: { PageTitle, ActionButton}
     }
       

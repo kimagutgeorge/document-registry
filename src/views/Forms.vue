@@ -1,5 +1,6 @@
 <template>
-
+    <div class=" with-max-height">
+        <div class="with-max-height-inner">
     <div class="row d-flex px-2 no-margin">
         <PageTitle page_name="Print Form"/>
     </div>
@@ -89,6 +90,8 @@
             <button class="btn btn-primary">PRINT <i class="fa-solid fa-print text-white"></i></button>
         </div>
         <ActionResponse message="Added successfully"/>
+    </div>
+    </div>
     </div>
     </template>
     <script>

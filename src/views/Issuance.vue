@@ -1,5 +1,6 @@
 <template>
-
+    <div class=" with-max-height">
+        <div class="with-max-height-inner">
     <div class="row d-flex px-2 no-margin">
         <PageTitle page_name="Issuance"/>
     </div>
@@ -43,6 +44,8 @@
             </div>
         </form>
         <ActionResponse message="Added successfully"/>
+    </div>
+    </div>
     </div>
     </template>
     <script>

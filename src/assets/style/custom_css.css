@@ -225,7 +225,7 @@ li{
     margin-top: -45vh;
 } */
  .page-body{
-    width: 99%;
+    width: 98%;
     margin-left: 1%;
  }
 .bar{
@@ -239,9 +239,28 @@ li{
     width: 400px !important;
     height: 400px !important;
 }
-.scrollable-page{
-    max-height: 88vh;
+.with-max-height{
+    max-height: 86vh;
     overflow-y: scroll;
+}
+.with-max-height::-webkit-scrollbar{
+    background-color: transparent;
+    width: 7px;
+}
+.with-max-height::-webkit-scrollbar-button{
+    background-color:transparent;
+    width: 100%;
+}
+.with-max-height::-webkit-scrollbar-track{
+    background-color: transparent;
+}
+.with-max-height::-webkit-scrollbar-thumb{
+    background-color:#737780;
+    border-radius: 3.5px;
+}
+.with-max-height-inner{
+    width: 99%;
+    margin-right: 1%;
 }
 /* .no-margin{
     margin-top: -30vh;

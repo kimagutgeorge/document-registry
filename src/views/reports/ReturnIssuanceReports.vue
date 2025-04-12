@@ -1,5 +1,6 @@
 <template>
-
+  <div class=" with-max-height">
+    <div class="with-max-height-inner">
     <div class="row d-flex mx-2 no-margin">
         
         <PageTitle page_name="Reports" child_page_name=" / Returns & Issuance"/>
@@ -68,6 +69,8 @@
             </tbody>
           </table>
     </div>
+    </div>
+  </div>
     </template>
     <script>
     import PageTitle from '@/components/titles/PageTitle.vue';

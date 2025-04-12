@@ -1,5 +1,6 @@
 <template>
-
+    <div class=" with-max-height">
+        <div class="with-max-height-inner">
 <div class="row d-flex px-2">
     <PageTitle page_name="Dashboard"/>
 </div>
@@ -103,7 +104,8 @@
         </div>
     </div>
 </div>
-
+</div>
+</div>
 </template>
 <script>
 import PageTitle from '@/components/titles/PageTitle.vue';
