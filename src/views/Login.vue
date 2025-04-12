@@ -4,8 +4,10 @@
             <form class="c-form">
                 <input type="text" class="w-100 form-control" placeholder="Username">
                 <input type="password" class="w-100 form-control mt-2" placeholder="Password">
-                <button class="btn btn-primary w-100 mt-2">Login <i class="fa-solid fa-lock"></i></button>
-                <span class="text-secondary mt-2">Forgot Password?</span>
+                <button class="btn btn-primary w-100 mt-2" @click="login">Login <i class="fa-solid fa-lock"></i></button>
+                <div class="mt-2">
+                <router-link class="text-secondary">Forgot Password?</router-link>
+            </div>
             </form>
             
         </div>
@@ -13,6 +15,12 @@
 </template>
 <script>
 export default{
-    name: "UserLogin"
+    name: "UserLogin",
+    methods: {
+        login(){
+        this.$store.commit('setLoginState', true);
+        this.$store.dispatch('login');
+        }
+    }
 }
 </script>

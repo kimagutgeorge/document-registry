@@ -21,7 +21,7 @@ export default [
       component: () => import('@/layout/Layout.vue'),
       children: [
         {
-            path: '/home',
+            path: '/',
             name: 'UserHome',
             component: UserDashboard
         },

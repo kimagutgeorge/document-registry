@@ -241,7 +241,7 @@ li{
     height: 400px !important;
 }
 .with-max-height{
-    max-height: 86vh;
+    height: 86vh;
     overflow-y: scroll;
 }
 .with-max-height::-webkit-scrollbar{

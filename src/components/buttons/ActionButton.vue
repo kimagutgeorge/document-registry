@@ -8,7 +8,7 @@
           <a 
             v-for="(action, name) in dropdown_actions" 
             :key="name"
-            class="custom-dropdown-item text-secondary col-12 d-block" 
+            class="custom-dropdown-item text-secondary col-12 d-block mt-2" 
             href="#"
             @click.prevent="triggerAction(name)"
           >

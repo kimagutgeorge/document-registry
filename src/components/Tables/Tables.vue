@@ -16,7 +16,7 @@
           <tr>
             
             <td class="f-14">
-              {{inventory.last_issue_date}}
+              <!-- {{inventory.last_issue_date}} -->
             </td>
           </tr>
         </tbody>
