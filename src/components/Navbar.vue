@@ -170,14 +170,46 @@
                 </div>
             </transition>
             <!-- navbar item -->
-            <div class="row flex-no-wrap p-2 nav-item">
+            <div class="row flex-no-wrap p-2 nav-item" @click="toggleDropDown('settings')">
                 <li class="col-10 ">
                     <router-link to="#" class="text-third flex-no-wrap">
                         <i class="fa-solid fa-gear text-third"></i>
                         <span class="ms-2 custom-fw-bold">Settings</span>
                     </router-link>
                 </li>
+                <div class="col-2">
+                    <i class="fa-solid text-third" :class="activeDropdown === 'settings' ? 'fa-minus' : 'fa-plus'" ></i>
+                </div>
             </div>
+            <transition name="slide-fade">
+                <div v-if="activeDropdown === 'settings' " class="row flex-no-wrap p-2">
+                    <li class="ms-4 mt-2 col-8 ">
+                        <router-link to="/settings/roles" class="text-third flex-no-wrap">
+                            <span class="custom-fw-lighter f-14">Roles</span>
+                        </router-link> 
+                    </li>
+                    <li class="ms-4 mt-4 col-8 ">
+                        <router-link to="/settings/departments" class="text-third flex-no-wrap">
+                            <span class="custom-fw-lighter f-14">Departments</span>
+                        </router-link> 
+                    </li>
+                    <li class="ms-4 mt-4 col-8 ">
+                        <router-link to="/settings/templates" class="text-third flex-no-wrap">
+                            <span class="custom-fw-lighter f-14">Form Template</span>
+                        </router-link> 
+                    </li>
+                    <li class="ms-4 mt-4 col-8 ">
+                        <router-link to="/settings/users" class="text-third flex-no-wrap">
+                            <span class="custom-fw-lighter f-14">Users</span>
+                        </router-link> 
+                    </li>
+                    <li class="ms-4 mt-4 col-8 ">
+                        <router-link to="/settings/users" class="text-third flex-no-wrap">
+                            <span class="custom-fw-lighter f-14">Audit & Logs</span>
+                        </router-link> 
+                    </li>
+                </div>
+            </transition>
             <!-- navbar item -->
         </div>
     </div>
