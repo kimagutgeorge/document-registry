@@ -387,3 +387,13 @@ li{
   .nav-bar-inner .nav-bar .nav-item:hover{
     background-color: #E9ECEE;
   }
+.form-group.form-control{
+    padding: 0px !important;
+}
+.form-group.form-control input{
+    border: 0px;
+    padding: 0px 10px;
+}
+.form-group.form-control input:focus{
+    outline: none;
+}
