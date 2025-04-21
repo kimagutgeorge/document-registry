@@ -29,7 +29,7 @@ export default{
     data() {
             return {
                 input_type: "password",
-                user_type: '0'
+                user_type: '1'
             }
         },
     methods: {

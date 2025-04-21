@@ -55,12 +55,14 @@
                         <transition name="slide-fade">
                             <div v-if="activeUserDropdown" class="d-block bg-primary notification-panel w-100 position-absolute">
                                 <div class="col-12 p-2">
-                                    <li class="nav-item">
+                                    <!-- <li class="nav-item">
                                         <i class="fa-solid fa-user text-white"></i> 
+                                        <router-link to="/profile">
                                         <span class="text-white ms-2">User Profile</span>
-                                    </li>
+                                    </router-link>
+                                    </li> -->
                                     <li class="nav-item mt-2">
-                                    <router-link to="/settings">
+                                    <router-link to="#">
                                         <i class="fa-solid fa-gear text-white"></i> 
                                         <span class="text-white ms-2">Settings</span>
                                     </router-link>

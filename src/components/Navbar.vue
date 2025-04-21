@@ -95,11 +95,11 @@
                             <span class="custom-fw-lighter f-14">Print Forms</span>
                         </li>
                     </router-link>
-                    <router-link to="/logs" class="row flex-no-wrap p-2 nav-item text-third" active-class="bg-third">
+                    <!-- <router-link to="/logs" class="row flex-no-wrap p-2 nav-item text-third" active-class="bg-third">
                         <li class="ms-4 mt-2 col-8">
                             <span class="custom-fw-lighter f-14">View Logs</span>
                         </li>
-                    </router-link>
+                    </router-link> -->
                 </div>
             </transition>
             <!-- navbar item -->
@@ -121,7 +121,7 @@
                             <span class="custom-fw-lighter f-14">Document Reports</span>
                         </li>
                     </router-link>
-                    <router-link to="/reports/user-activity" class="row flex-no-wrap p-2 nav-item text-third" active-class="bg-third">
+                    <router-link to="/reports/user-activity"  v-if="user_type === '0' " class="row flex-no-wrap p-2 nav-item text-third" active-class="bg-third">
                         <li class="ms-4 mt-2 col-8">
                             <span class="custom-fw-lighter f-14">User Activity</span>
                         </li>
@@ -139,7 +139,7 @@
                 </div>
             </transition>
             <!-- navbar item -->
-            <div class="row flex-no-wrap p-2 nav-item text-third nav-drop-down" @click="toggleDropDown('users')">
+            <div  v-if="user_type === '0' " class="row flex-no-wrap p-2 nav-item text-third nav-drop-down" @click="toggleDropDown('users')">
                 <li class="col-10 ">
                     <router-link to="#" class="text-third flex-no-wrap">
                         <i class="fa-solid fa-users text-third"></i>
@@ -166,7 +166,7 @@
                 </div>
             </transition>
             <!-- navbar item -->
-            <div class="row flex-no-wrap p-2 nav-item text-third nav-drop-down" @click="toggleDropDown('settings')">
+            <div  v-if="user_type === '0' " class="row flex-no-wrap p-2 nav-item text-third nav-drop-down" @click="toggleDropDown('settings')">
                 <li class="col-10 ">
                     <router-link to="#" class="text-third flex-no-wrap">
                         <i class="fa-solid fa-gear text-third"></i>

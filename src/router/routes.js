@@ -6,7 +6,6 @@ import UserDashboard from '@/views/Dashboard.vue';
 import DocumentIssuance from '@/views/Issuance.vue'
 import DocumentReturn from '@/views/Return.vue';
 import PrintForm from '@/views/Forms.vue'
-import AuditLogs from '@/views/Logs.vue';
 import DocumentReports from '@/views/reports/DocumentReports.vue'
 import UserActivityReports from '@/views/reports/UserActivityReports.vue'
 import RequestDocuments from '@/views/reports/RequestReports.vue';
@@ -15,6 +14,7 @@ import AllUsers from '@/views/Users.vue';
 import AddUser from '@/views/AddUser.vue';
 import UserRoles  from '@/views/Roles.vue';
 import UserDepartments  from '@/views/Departments.vue';
+import UserProfile from '@/views/Profile.vue';
 
 
 export default [
@@ -71,12 +71,6 @@ export default [
           meta: { requiresAuth: true }
         },
         {
-          path: '/logs',
-          name: 'AuditLogs',
-          component: AuditLogs,
-          meta: { requiresAuth: true }
-        },
-        {
           path: '/reports/documents',
           name: 'DocumentReports',
           component: DocumentReports,
@@ -124,6 +118,12 @@ export default [
           component: UserDepartments,
           meta: { requiresAuth: true }
         },
+        {
+          path: '/profile',
+          name: 'UserProfile',
+          component: UserProfile,
+          meta: {requiresAuth: true}
+        }
         
       ],
     },

@@ -5,7 +5,7 @@
         <PageTitle page_name="Print Form"/>
     </div>
     <div class="card w-100 d-flex w-100 p-4 mt-2 no-border position-relative">
-        <li class="text-dark px-2 custom-fw-bold f-14 sm-title mt-2">Print Form</li>
+        <SubTitle title="Print Form" />
         <div class="row d-flex col-12 p-4">
             <div class="col-12 d-flex p-2">
                 <div class="col-6">
@@ -89,17 +89,16 @@
         <div class="col-11 d-flex flex-no-wrap justify-content-end p-2">
             <button class="btn btn-primary">PRINT <i class="fa-solid fa-print text-white"></i></button>
         </div>
-        <ActionResponse message="Added successfully"/>
     </div>
     </div>
     </div>
     </template>
     <script>
     import PageTitle from '@/components/titles/PageTitle.vue';
-    import ActionResponse from '@/components/Response.vue'
+import SubTitle from '@/components/titles/SubTitle.vue';
     export default{
         name: "PrintForm",
-        components: { PageTitle, ActionResponse}
+        components: { PageTitle, SubTitle}
     }
       
     </script>
