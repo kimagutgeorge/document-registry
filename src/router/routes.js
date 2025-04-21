@@ -25,87 +25,104 @@ export default [
         {
             path: '/',
             name: 'UserHome',
-            component: UserDashboard
+            component: UserDashboard,
+            meta: { requiresAuth: true }
         },
         { 
           path: '/home', 
           name: 'UserHome',
-          component: UserDashboard
+          component: UserDashboard,
+          meta: { requiresAuth: true }
         },
         {
             path: '/documents',
             name:'AllDocuments',
-            component: AllDocuments
+            component: AllDocuments,
+            meta: { requiresAuth: true }
         },
         {
             path: '/documents/add',
             name:'AddDocuments',
-            component: AddDocument
+            component: AddDocument,
+            meta: { requiresAuth: true }
         },
         {
             path: '/requests',
             name:'AllRequests',
-            component: AllRequests
+            component: AllRequests,
+            meta: { requiresAuth: true }
         },
         {
           path: '/issuance',
           name: 'DocumentIssuance',
-          component: DocumentIssuance
+          component: DocumentIssuance,
+          meta: { requiresAuth: true }
         },
         {
           path: '/returns',
           name: 'DocumentReturn',
-          component: DocumentReturn
+          component: DocumentReturn,
+          meta: { requiresAuth: true }
         },
         {
           path: '/forms',
           name: 'PrintForm',
-          component: PrintForm
+          component: PrintForm,
+          meta: { requiresAuth: true }
         },
         {
           path: '/logs',
           name: 'AuditLogs',
-          component: AuditLogs
+          component: AuditLogs,
+          meta: { requiresAuth: true }
         },
         {
           path: '/reports/documents',
           name: 'DocumentReports',
-          component: DocumentReports
+          component: DocumentReports,
+          meta: { requiresAuth: true }
         },
         {
           path: '/reports/user-activity',
           name: 'UserActivityReports',
-          component: UserActivityReports
+          component: UserActivityReports,
+          meta: { requiresAuth: true }
         },
         {
           path: '/reports/requests',
           name: 'RequestDocuments',
-          component: RequestDocuments
+          component: RequestDocuments,
+          meta: { requiresAuth: true }
         },
         {
           path: '/reports/issuance-returns',
           name: 'ReturnIssuance',
-          component: ReturnIssuance
+          component: ReturnIssuance,
+          meta: { requiresAuth: true }
         },
         {
           path: '/users',
           name: 'AllUsers',
-          component: AllUsers
+          component: AllUsers,
+          meta: { requiresAuth: true }
         },
         {
           path: '/users/add',
           name: 'AddUser',
-          component: AddUser
+          component: AddUser,
+          meta: { requiresAuth: true }
         },
         {
           path: '/settings/roles',
           name: 'Roles',
-          component: UserRoles
+          component: UserRoles,
+          meta: { requiresAuth: true }
         },
         {
           path: '/settings/departments',
           name: 'Roles',
-          component: UserDepartments
+          component: UserDepartments,
+          meta: { requiresAuth: true }
         },
         
       ],

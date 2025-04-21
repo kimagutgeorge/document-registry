@@ -58,11 +58,13 @@
                                         <i class="fa-solid fa-user text-white"></i> 
                                         <span class="text-white ms-2">User Profile</span>
                                     </li>
-                                    <router-link to="/settings" class="nav-item mt-2">
+                                    <li class="nav-item mt-2">
+                                    <router-link to="/settings">
                                         <i class="fa-solid fa-gear text-white"></i> 
                                         <span class="text-white ms-2">Settings</span>
                                     </router-link>
-                                    <li class="nav-item mt-2" @click="logout">
+                                </li>
+                                    <li class="nav-item mt-2" @click="$emit('logout')">
                                         <i class="fa-solid fa-power-off text-white"></i> 
                                         <span class="text-white ms-2">Logout</span>
                                     </li>
@@ -89,10 +91,6 @@ export default{
         },
         toggleUserDropdown(){
             this.activeUserDropdown = !this.activeUserDropdown
-        },
-        logout(){
-        this.$store.commit('setLoginState', true);
-        this.$store.dispatch('login');
         }
     }
 }

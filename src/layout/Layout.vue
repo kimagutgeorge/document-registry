@@ -3,7 +3,7 @@
       <NavBar/>
       <!-- <div class="row col-10 h-100 d-flex no-align"> -->
       <div class="col-10">
-        <TopBar/>
+        <TopBar @logout="logout"/>
         <div class="page-body scrollable-page">
           <router-view/>
         </div>
@@ -11,13 +11,14 @@
     </div>
     <!-- login page -->
     <div v-else class="main-page d-flex">
-      <UserLogin/>
+      <UserLogin @login="login"/>
     </div>
   </template>
   
   <script>
   import NavBar from '@/components/Navbar.vue';
   import TopBar from '@/components/TopBar.vue';
+import router from '@/router';
   import UserLogin from '@/views/Login.vue'
   
   
@@ -25,7 +26,7 @@
     name: 'PageLayout',
     data() {
       return {
-        is_logged_in: true
+        is_logged_in: false
       }
     },
     computed: {
@@ -33,6 +34,17 @@
   //   return this.$store.state.isLoggedIn;
   // }
 },
-    components: { NavBar, TopBar, UserLogin}
+    components: { NavBar, TopBar, UserLogin},
+  methods:{
+    login(){
+      this.is_logged_in = true
+      localStorage.setItem("is_logged_in", this.is_logged_in)
+      router.push('/home');
+    },
+    logout(){
+      this.is_logged_in = false
+      localStorage.setItem("is_logged_in", this.is_logged_in)
+    }
+  }
   }
   </script>

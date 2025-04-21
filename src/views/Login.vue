@@ -1,7 +1,7 @@
 <template>
     <div class="w-100 h-100 d-flex justify-content-center">
         <div class="h-100 d-flex flex-column justify-content-center">
-            <form class="c-form" @submit.prevent="login">
+            <form class="c-form" @submit.prevent="$emit('login')">
                 <input type="email" class="w-100 form-control" placeholder="Username" required>
 
                 <div class="form-group d-flex flex-no-wrap form-control mt-2">
@@ -34,10 +34,7 @@ export default{
                 }
                 
             },
-        login(){
-        // this.$store.commit('setLoginState', true);
-        // this.$store.dispatch('login');
-        }
+        
     }
 }
 </script>
