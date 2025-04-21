@@ -1,23 +1,13 @@
-import { createStore } from 'vuex';
+import { defineStore } from 'pinia'
 
-
-export default createStore({
-  state() {
-    return {
-      isLoggedIn: false
-    }
-  },
-  mutations: {
-    SET_LOGIN_STATUS(state, status) {
-      state.isLoggedIn = status;
-    }
-  },
+export const useUserStore = defineStore('user', {
+  state: () => ({
+    user_type: localStorage.getItem('user_type') || null,
+  }),
   actions: {
-    login({ commit }) {
-      commit('SET_LOGIN_STATUS', true);
-    },
-    logout({ commit }) {
-      commit('SET_LOGIN_STATUS', false);
+    setUserType(type) {
+      this.user_type = type
+      localStorage.setItem('user_type', type)
     }
   }
-});
+})

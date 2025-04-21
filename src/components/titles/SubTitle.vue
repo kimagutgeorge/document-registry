@@ -1,5 +1,5 @@
 <template>
-    <li class="text-dark px-2 custom-fw-bold f-14 sm-title mt-2">All Users</li>
+    <li class="text-dark px-2 custom-fw-bold f-14 sm-title mt-2">{{title}}</li>
 </template>
 <script>
 export default{

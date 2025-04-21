@@ -6,7 +6,9 @@
         <PageTitle page_name="Requests"/>
     </div>
     <div class="card w-100 d-flex w-100 px-2 mt-2 no-border">
-        <li class="text-dark px-2 custom-fw-bold f-14 sm-title mt-2">All Requests</li>
+        <SubTitle title="Add Requests"/>
+        <ActionResponse :message="message" :class="response_class" @close_alert="closeAlert" v-if="is_response_visible" />
+
         <div class="col-12 d-flex flex-row-reverse">
             <div class="d-flex flex-no-wrap justify-content-end p-sort float-right">
                 <p class="text-secondary f-15">Sort:</p>
@@ -41,11 +43,11 @@
                   <ActionButton 
                   :dropdown_actions="{
                     approve: {
-                      action: () => viewItem(itemId),
+                      action: () => approveItem(),
                       iconClass: 'text-primary'
                     },
                     reject: {
-                      action: () => editItem(itemId),
+                      action: () => rejectItem(),
                       iconClass: 'text-danger'
                     }
                   }"
@@ -64,9 +66,36 @@
     <script>
     import PageTitle from '@/components/titles/PageTitle.vue';
     import ActionButton from '@/components/buttons/ActionButton.vue';
+import SubTitle from '@/components/titles/SubTitle.vue';
+import ActionResponse from '@/components/Response.vue';
     export default{
         name: "AllRequests",
-        components: { PageTitle, ActionButton}
+        components: { PageTitle, ActionButton, SubTitle, ActionResponse},
+        data(){
+          return{
+            profile_pic: '',
+                message: "",
+                is_response_visible: false,
+                response_class: null
+          }
+        },
+        methods: {
+          closeAlert(){
+                this.is_response_visible = false
+            },
+            approveItem(){
+              
+              this.response_class = "bg-primary"
+                this.is_response_visible = true
+                this.message = "Request Approved"
+            },
+            rejectItem(){
+              if(confirm("Reject this request?") === false) return
+              this.response_class = "bg-danger"
+                this.is_response_visible = true
+                this.message = "Request Rejected"
+            }
+        }
     }
       
     </script>

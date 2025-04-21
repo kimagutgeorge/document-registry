@@ -48,7 +48,8 @@
                         </div>
                         <div class="d-block ms-2 nav-item" @click="toggleUserDropdown">
                             <h5 class="text-primary f-15 text-uppercase fw-bold">John Doe <i class="fa-solid fa-angle-down text-primary"></i></h5>
-                            <span class="f-15 text-primary ">Admin</span>
+                            <span class="f-15 text-primary " v-if="user_type === '0' ">Admin</span>
+                            <span class="f-15 text-primary " v-else>Registration</span>
                         </div>
                         <!-- user settings -->
                         <transition name="slide-fade">
@@ -82,9 +83,13 @@ export default{
     data(){
         return{
             activeDropdown: null,
-            activeUserDropdown: null
+            activeUserDropdown: null,
+            user_type: null,
         }
     },
+    created() {
+    this.user_type = localStorage.getItem("user_type");
+  },
     methods: {
         toggleDropdown(){
             this.activeDropdown = !this.activeDropdown

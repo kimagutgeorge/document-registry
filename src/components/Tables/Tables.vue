@@ -16,7 +16,7 @@
                 v-model="row[header.key]"
                 @blur="saveEdit(row)"
                 @keyup.enter="saveEdit(row)"
-                class="form-control form-control-sm"
+                class="form-control"
               >
             </template>
             <template v-else>

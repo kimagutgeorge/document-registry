@@ -1,7 +1,7 @@
 <template>
-  <div class="alert bg-primary text-white action-response position-absolute float-right alert-primary alert-dismissible fade show" role="alert">
+  <div class="alert text-white action-response position-absolute float-right alert-primary alert-dismissible fade show" role="alert">
       {{ message }}
-      <button type="button" class="close btn" @click="handleClose">
+      <button type="button" class="close btn" @click="$emit('close_alert')">
           <span aria-hidden="true">&times;</span>
       </button>
   </div>
@@ -13,10 +13,5 @@ export default {
   props: {
       message: String
   },
-  methods: {
-      handleClose() {
-          this.$emit('close_alert');
-      }
-  }
 }
 </script>

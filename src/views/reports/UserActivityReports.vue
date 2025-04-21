@@ -57,7 +57,7 @@
           return {
             report_title: 'Inventory Report',
             users: [
-              {name: 'Document Twenty',
+              {name: 'George Kivula',
                 role: 'Advocate',
                 action_performed: 'Request',
                 time_stamp: 'Thu, 10 Apr 2025 13:54:56 GMT',
@@ -65,21 +65,21 @@
                     {doc_name: 'Title Deed 8'},
                     {doc_name: 'Document 4'}
                 ],
-                description: 'Some description here',
+                description: 'Requested',
               },
-              {name: 'Document Twenty',
-                role: 'Advocate',
+              {name: 'Sheila Anyango',
+                role: 'Clerk',
                 action_performed: 'Login',
                 time_stamp: 'Thu, 10 Apr 2025 13:54:56 GMT',
                 related_documents : [
                     {doc_name: 'Title Deed 8'},
                     {doc_name: 'Document 4'}
                 ],
-                description: 'Some description here',
+                description: 'Picked',
               },
-              {name: 'Document Twenty',
+              {name: 'Felix M.',
                 role: 'Advocate',
-                action_performed: 'Request',
+                action_performed: 'Return',
                 time_stamp: 'Thu, 10 Apr 2025 13:54:56 GMT',
                 related_documents : [
                     {doc_name: 'Title Deed 8'},

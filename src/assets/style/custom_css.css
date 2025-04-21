@@ -332,9 +332,12 @@ li{
   }
   .action-response.alert{
     padding: 0px 10px !important;
-    position: fixed;
+    left: 80%;
+    min-width: 200px;
+    border: 0px !important;
+    /* position: fixed;
     bottom: 10px;
-    right: 10px;
+    right: 10px; */
   }
   .no-align{
     justify-content:start;

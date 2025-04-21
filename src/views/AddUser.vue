@@ -6,7 +6,7 @@
     </div>
     <div class="card w-100 d-flex w-100 p-4 mt-2 no-border position-relative">
         <SubTitle title="Add User"/>
-        <form class="row d-flex">
+        <form class="row d-flex" @submit.prevent="addUser">
             <div class="col-6 p-4">
                 <div class="form-group w-75 mt-4">
                     <div class="col-12 d-flex flex-no-wrap">
@@ -23,24 +23,24 @@
                 </div>
                 <div class="form-group w-75 mt-4">
                     <label class="text-secondary custom-fw-bold f-14">First Name</label>
-                    <input class="form-control" placeholder="John">
+                    <input class="form-control" placeholder="John" required>
                 </div>
                 <div class="form-group w-75 mt-4">
                     <label class="text-secondary custom-fw-bold f-14">Last Name</label>
-                    <input class="form-control" placeholder="Doe">
+                    <input class="form-control" placeholder="Doe" required>
                 </div>
                 <div class="form-group w-75 mt-4">
                     <label class="text-secondary custom-fw-bold f-14">Email</label>
-                    <input type="email" class="form-control" placeholder="johndoe@example.com">
+                    <input type="email" class="form-control" placeholder="johndoe@example.com" required>
                 </div>
                 <div class="form-group w-75 mt-4">
                         <p class="f-15 custom-fw-bold text-secondary">Phone Number</p>
-                        <input type="number" class="form-control" placeholder="07000000">
+                        <input type="number" class="form-control" placeholder="07000000" required>
                 </div>
                 <div class="form-group w-75 mt-4">
                     <p class="f-15 custom-fw-bold text-secondary">Password</p>
                     <div class="col-12 d-flex flex-no-wrap">
-                        <input :type="input_type" class="form-control" placeholder="Password">
+                        <input :type="input_type" class="form-control" placeholder="Password" required>
                         <span class="btn btn-primary" @click="viewPassword"><i class="fa-solid" :class="input_type === 'password' ? 'fa-eye' : 'fa-eye-slash' "></i></span>
                     </div>
                     
@@ -49,7 +49,7 @@
             <div class="col-6">
                 <div class="form-group w-75 mt-4">
                     <label class="text-secondary custom-fw-bold f-14">Role</label>
-                    <select name="role" class="form-control">
+                    <select name="role" class="form-control" required>
                         <option>Admin</option>
                         <option>Registration Office</option>
                         <option>Advocate</option>
@@ -59,7 +59,7 @@
                 </div>
                 <div class="form-group w-75 mt-4">
                     <label class="text-secondary custom-fw-bold f-14">Department</label>
-                    <select name="role" class="form-control">
+                    <select name="role" class="form-control" required>
                         <option>Legal</option>
                         <option>Lands</option>
                       </select>
@@ -76,7 +76,7 @@
                 </div>
             </div>
         </form>
-        <ActionResponse message="Added successfully"/>
+        <ActionResponse :message="message" :class="response_class" @close_alert="closeAlert" v-if="is_response_visible" />
     </div>
     </div>
     </div>
@@ -93,6 +93,9 @@ import SubTitle from '@/components/titles/SubTitle.vue';
             return {
                 input_type: "password",
                 profile_pic: '',
+                message: "",
+                is_response_visible: false,
+                response_class: null
             }
         },
         methods: {
@@ -103,6 +106,9 @@ import SubTitle from '@/components/titles/SubTitle.vue';
                     this.input_type = "password"
                 }
                 
+            },
+            closeAlert(){
+                this.is_response_visible = false
             },
             /* preview image*/
             previewImage(event){
@@ -118,7 +124,13 @@ import SubTitle from '@/components/titles/SubTitle.vue';
                 } else {
                     this.profile_pic = '';
                 }
+            },
+            addUser(){
+                this.response_class = "bg-primary"
+                this.is_response_visible = true
+                this.message = "Added successfully"   
             }
+            
         }
     }
       

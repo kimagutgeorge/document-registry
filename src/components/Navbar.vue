@@ -179,27 +179,27 @@
             </div>
             <transition name="slide-fade">
                 <div v-if="activeDropdown === 'settings' " class="row flex-no-wrap p-2">
-                    <router-link to="/settings/roles" class="row flex-no-wrap p-2 nav-item text-third" active-class="bg-third">
+                    <!-- <router-link to="/settings/roles" class="row flex-no-wrap p-2 nav-item text-third" active-class="bg-third">
                         <li class="ms-3 mt-2 col-8">
                             <span class="custom-fw-lighter f-14">Roles</span>
                         </li>
-                    </router-link>
+                    </router-link> -->
                     <router-link to="/settings/departments" class="row flex-no-wrap p-2 nav-item text-third" active-class="bg-third">
                         <li class="ms-3 mt-2 col-8">
                             <span class="custom-fw-lighter f-14">Departments</span>
                         </li>
                     </router-link>
-                    <router-link to="/settings/templates" class="row flex-no-wrap p-2 nav-item text-third" active-class="bg-third">
+                    <router-link to="#" class="row flex-no-wrap p-2 nav-item text-third" active-class="bg-third">
                         <li class="ms-3 mt-2 col-8">
                             <span class="custom-fw-lighter f-14">Form Template</span>
                         </li>
                     </router-link>
-                    <router-link to="/settings/users" class="row flex-no-wrap p-2 nav-item text-third" active-class="bg-third">
+                    <router-link to="#" class="row flex-no-wrap p-2 nav-item text-third" active-class="bg-third">
                         <li class="ms-3 mt-2 col-8">
                             <span class="custom-fw-lighter f-14">Users</span>
                         </li>
                     </router-link>
-                    <router-link to="/settings/audit-logs" class="row flex-no-wrap p-2 nav-item text-third" active-class="bg-third">
+                    <router-link to="#" class="row flex-no-wrap p-2 nav-item text-third" active-class="bg-third">
                         <li class="ms-3 mt-2 col-8">
                             <span class="custom-fw-lighter f-14">Audit & Logs</span>
                         </li>
@@ -214,16 +214,21 @@
 </template>
 <script>
 export default {
-    name: "NavBar",
-    data(){
-        return{
-            activeDropdown: null,
-        }
-    },
-    methods:{
-        toggleDropDown(key){
-            this.activeDropdown = this.activeDropdown === key ? null : key;
-        }
+  name: "NavBar",
+  data() {
+    return {
+      activeDropdown: null,
+      user_type: null,
+    };
+  },
+  created() {
+    this.user_type = localStorage.getItem("user_type");
+  },
+  methods: {
+    toggleDropDown(key) {
+      this.activeDropdown = this.activeDropdown === key ? null : key;
     }
-}
+  }
+};
+
 </script>
