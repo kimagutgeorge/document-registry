@@ -212,7 +212,7 @@
               active_location: '',
               current_location:'',
               active_folder: '',
-              main_panel: 'files',
+              main_panel: 'clients',
               files_shown: false,
               alertMessage: "Saved",
               text_is_readonly: true,
