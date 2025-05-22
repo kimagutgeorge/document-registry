@@ -135,12 +135,12 @@
                     <p class="f-15 custom-fw-bold text-secondary">Email</p>
                         <input type="email" class="form-control" placeholder="Email" required>
                 </div>
-                <div class="form-group mt-4">
+                <!-- <div class="form-group mt-4">
                     <SubTitle title="Files"/>
                 </div>
                 <div class="form-group w-75 mt-4">
                         <Dropzone/>
-                </div>
+                </div> -->
                 <div class="form-group w-75 mt-4">
                     <button class="btn btn-primary">SAVE</button>
                 </div>
@@ -156,10 +156,10 @@
     // import PageTitle from '@/components/titles/PageTitle.vue';
     import ActionResponse from '@/components/Response.vue'
 import SubTitle from '@/components/titles/SubTitle.vue';
-import Dropzone from '@/components/Dropzone.vue';
+// import Dropzone from '@/components/Dropzone.vue';
     export default{
         name: "AddClient",
-        components: { /* PageTitle, */ ActionResponse, SubTitle, Dropzone},
+        components: { /* PageTitle, */ ActionResponse, SubTitle, /* Dropzone */},
         data() {
             return {
                 input_type: "password",

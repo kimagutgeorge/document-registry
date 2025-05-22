@@ -32,7 +32,7 @@
               <div class="col-6 d-flex justify-content-center">
                 <button class="p-1 border border-primary f-14 bg-transparent text-primary"><i class="fa-solid fa-paperclip"></i> Copy Link</button>
                 <button class="p-1 border border-primary f-14 bg-transparent text-primary ms-2"><i class="fa-solid fa-download"></i> Download</button>
-                <button class="p-1 border border-primary f-14 bg-transparent text-primary ms-2"><i class="fa-solid fa-eye"></i> Preview</button>
+                <button class="p-1 border border-primary f-14 bg-transparent text-primary ms-2" @click="$emit('show_preview')" ><i class="fa-solid fa-eye"></i> Preview</button>
                 <button class="p-1 border border-primary f-14 bg-transparent text-primary ms-2"><i class="fa-solid fa-angle-right"></i> Go To Location</button>
               </div>
               <div class="col-3 d-flex justify-content-end">
@@ -40,7 +40,7 @@
               </div>
           </div>
           <!-- users table -->
-          <div class="col-12" v-if="files_shown === false" >
+          <div class="col-12" v-if="files_shown === '' " >
               <table class="table">
 
             <thead>
@@ -70,7 +70,7 @@
                       iconClass: 'text-primary'
                     },
                     add: {
-                      action: () => add_files(client.name),
+                      action: () => show_files('add_file', client.name),
                       iconClass: 'text-primary'
                     }
                   }"
@@ -81,9 +81,9 @@
             </tbody>
           </table>
           </div>
-          <div v-if="files_shown" class="col-12 p-2 rounded-1" >
+          <div v-if="files_shown === 'client_docs' " class="col-12 p-2 rounded-1" >
             <div class="w-100 d-flex justify-content-end">
-              <i class="fa-solid fa-close f-16 text-white bg-danger p-2 rounded-1" style="cursor:pointer;" @click="show_files('is_hidden')"></i>
+              <i class="fa-solid fa-close f-16 border border-primary text-primary p-1 " style="cursor:pointer;" @click="show_files('is_hidden')"></i>
             </div>
             <SubTitle :title="client_in_view"/>
             <div class="col-12 d-flex flex-wrap" >
@@ -102,6 +102,66 @@
             </div>
           </div>
           </div>
+          <!-- add client files -->
+          <div v-if="files_shown === 'add_file' " class="col-12 p-2 rounded-1" >
+            <div class="w-100 d-flex justify-content-end">
+              <i class="fa-solid fa-close f-16 border border-primary text-primary p-1 " style="cursor:pointer;" @click="show_files('is_hidden')"></i>
+            </div>
+            <SubTitle :title="client_in_view"/>
+            <div class="col-12 d-flex flex-wrap" >
+              <form class="w-100 row" @submit.prevent="addDocument">
+                <div class="col-6">
+                
+                <div class="form-group w-75 mt-4">
+                    <label class="text-secondary custom-fw-bold f-14">Name</label>
+                    <input class="form-control" placeholder="Document Name" required>
+                </div>
+                <div class="form-group w-75 mt-4">
+                    <label class="text-secondary custom-fw-bold f-14">File Record No.</label>
+                    <input class="form-control" placeholder="2025/28" required>
+                </div>
+                <div class="form-group w-75 mt-4">
+                    <label class="text-secondary custom-fw-bold f-14">Location</label>
+                    <select class="form-control" onfocus='this.size=10;' onblur='this.size=1;' 
+              onchange='this.size=1; this.blur();'>
+                        <option>L 1</option>
+                        <option>L 2</option>
+                        <option>L 3</option>
+                        <option>L 4</option>
+                        <option>L 5</option>
+                        <option>L 6</option>
+                        <option>L 7</option>
+                        <option>L 8</option>
+                        <option>L 9</option>
+                        <option>L 10</option>
+                    </select>
+                </div>
+                <div class="form-group w-75 mt-4">
+                    <label class="text-secondary custom-fw-bold f-14">Type of Document</label>
+                    <select class="form-control" onfocus='this.size=3;' onblur='this.size=1;' 
+                        onchange='this.size=1; this.blur();'>
+                        <option>Title Deed</option>
+                        <option>Log Books</option>
+                        <option>Healthcare</option>
+                    </select>
+                </div>
+                </div>
+                <div class="col-6">
+                    <div class="form-group w-75 mt-4">
+                      <label class="text-secondary custom-fw-bold f-14">Scan Upload</label>
+                      <input type="file" class="form-control" placeholder="2025/28" required>
+                  </div>
+                  <div class="form-group w-75 mt-4">
+                      <label class="text-secondary custom-fw-bold f-14">Description</label>
+                      <textarea class="form-control vh-20" placeholder="Document description" required></textarea>
+                  </div>
+                  <div class="form-group w-75 mt-4">
+                      <button class="btn btn-primary">SAVE</button>
+                  </div>
+                </div>
+              </form>
+          </div>
+          </div>
           
         </div>
         <!-- show folders and locations -->
@@ -114,7 +174,7 @@
               <div class="col-6 d-flex justify-content-center">
                 <button class="p-1 border border-primary f-14 bg-transparent text-primary"><i class="fa-solid fa-paperclip"></i> Copy Link</button>
                 <button class="p-1 border border-primary f-14 bg-transparent text-primary ms-2"><i class="fa-solid fa-download"></i> Download</button>
-                <button class="p-1 border border-primary f-14 bg-transparent text-primary ms-2"><i class="fa-solid fa-eye"></i> Preview</button>
+                <button class="p-1 border border-primary f-14 bg-transparent text-primary ms-2" @click="$emit('show_preview') "><i class="fa-solid fa-eye"></i> Preview</button>
                 <button class="p-1 border border-primary f-14 bg-transparent text-primary ms-2"><i class="fa-solid fa-angle-right"></i> Go To Location</button>
               </div>
               <div class="col-3 d-flex justify-content-end">
@@ -191,6 +251,8 @@
           </div>
           
         </div>
+        <!-- add files panel -->
+
     </div>
     </div>
     </div>
@@ -213,7 +275,7 @@
               current_location:'',
               active_folder: '',
               main_panel: 'clients',
-              files_shown: false,
+              files_shown: '',
               alertMessage: "Saved",
               text_is_readonly: true,
               selected_all: false,
@@ -328,17 +390,23 @@
             change_view(key){
               this.main_panel = key
             },
-            show_files(key){
-              if(key == 'is_hidden'){
-                this.files_shown = false
+            show_files(key, name){
+              const key_name = key;
+
+              if(key_name == 'is_hidden'){
+                this.files_shown = ''
+              }else if(key_name == 'add_file'){
+                this.files_shown = 'add_file'
+                this.client_in_view = name
               }else{
-                this.client_in_view = key
-                this.files_shown = true
+                this.client_in_view = key_name
+                this.files_shown = 'client_docs'
               }
               
             },
             select_item(key) {
             if (this.files[key]) {
+              this.option_panel_view = true;
               const was_selected = this.files[key].is_selected;
 
               // Toggle selection
@@ -346,13 +414,15 @@
 
               if (was_selected) {
                 // Deselect: remove one item
-                this.selected_items.pop(); // or shift() if you want to remove the first
+                this.selected_items.pop();
+                if(this.selected_items.length < 1){
+                  this.option_panel_view = false
+                }
               } else {
                 // Select: add this item
                 this.selected_items.push({ item_index: key });
               }
 
-              this.option_panel_view = true;
             }
           },
             clear_items(key){
@@ -382,6 +452,14 @@
                   this.selected_items = []; 
               }
               
+            },
+            add_files(key){
+              this.main_panel = key
+            },
+            addDocument(){
+                this.response_class = "bg-primary"
+                this.is_response_visible = true
+                this.message = "Added successfully"   
             }
         }
     }

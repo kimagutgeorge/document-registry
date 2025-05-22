@@ -159,70 +159,25 @@ import ActionResponse from '@/components/Response.vue';
                   phone: '0743216789',
                   email: 'dan.omondi@example.com'
                 },
-                {
-                  id: 6,
-                  f_name: 'Joyce',
-                  m_name: 'Chebet',
-                  l_name: 'Cherono',
-                  nationality: 'Kenyan',
-                  gender: 'Female',
-                  id_type: 'National ID',
-                  id_number: '36781234',
-                  occupation: 'Pharmacist',
-                  physical_address: 'Nakuru',
-                  postal_address: 'P.O. BOX 543 Nakuru',
-                  phone: '0789123456',
-                  email: 'joyce.cherono@example.com'
-                },
-                {
-                  id: 7,
-                  f_name: 'Elijah',
-                  m_name: 'Otieno',
-                  l_name: 'Ochieng',
-                  nationality: 'Kenyan',
-                  gender: 'Male',
-                  id_type: 'National ID',
-                  id_number: '29874561',
-                  occupation: 'Electrician',
-                  physical_address: 'Siaya',
-                  postal_address: 'P.O. BOX 812 Siaya',
-                  phone: '0734567890',
-                  email: 'elijah.o@example.com'
-                },
-                {
-                  id: 8,
-                  f_name: 'Mary',
-                  m_name: 'Atieno',
-                  l_name: 'Okoth',
-                  nationality: 'Kenyan',
-                  gender: 'Female',
-                  id_type: 'Passport',
-                  id_number: 'C2233445',
-                  occupation: 'Nurse',
-                  physical_address: 'Busia',
-                  postal_address: 'P.O. BOX 334 Busia',
-                  phone: '0711223344',
-                  email: 'mary.okoth@example.com'
-                }
               ],
           }
         },
         methods: {
           deleteItem(index){
-            if(confirm('Delete this document?') === false) return;
-            const doc = index;
-            if (doc !== -1) {
-                this.documents.splice(doc, 1);
+            if(confirm('Delete this client?') === false) return;
+            const client = index;
+            if (client !== -1) {
+                this.clients.splice(client, 1);
             }
             this.response_class = "bg-danger"
             this.is_response_visible = true
-            this.message = "Document deleted" 
+            this.message = "Client deleted" 
           },
           closeAlert(){
                 this.is_response_visible = false
             },
             viewItem(){
-             this.$router.push('/documents/add')
+             this.$router.push('/clients/add')
             }
         }
     }

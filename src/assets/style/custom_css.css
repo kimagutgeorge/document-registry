@@ -115,6 +115,8 @@ input:focus{
     border-left: 1px solid #DBDBDB;
     border-right: 1px solid #DBDBDB;
     height: 90vh;
+    max-height: 90vh;
+    overflow-y: scroll;
 }
 .custom-fw-bold{
     font-weight: 600 !important;
@@ -216,7 +218,7 @@ input:focus{
 .notification-panel{
     margin-top: 35px;
     box-shadow: 0px 0px 10px rgb(200, 200, 200);
-    z-index: 10 !important;
+    z-index: 1020 !important;
 }
 .notification-panel-holder{
     width: 250px;
@@ -264,20 +266,27 @@ input:focus{
     height: 88vh;
     overflow-y: scroll;
 }
-.with-max-height::-webkit-scrollbar{
+.with-max-height::-webkit-scrollbar,
+.nav-bar::-webkit-scrollbar{
     background-color: transparent;
     width: 7px;
 }
-.with-max-height::-webkit-scrollbar-button{
+.with-max-height::-webkit-scrollbar-button,
+.nav-bar::-webkit-scrollbar-button{
     background-color:transparent;
     width: 100%;
 }
-.with-max-height::-webkit-scrollbar-track{
+.with-max-height::-webkit-scrollbar-track,
+.nav-bar::-webkit-scrollbar-track{
     background-color: transparent;
 }
-.with-max-height::-webkit-scrollbar-thumb{
+.with-max-height::-webkit-scrollbar-thumb,
+.nav-bar::-webkit-scrollbar-thumb{
     background-color:#737780;
     border-radius: 3.5px;
+}
+.nav-bar::-webkit-scrollbar-thumb{
+    background-color: rgb(220, 220, 220);
 }
 .with-max-height-inner{
     width: 99%;
