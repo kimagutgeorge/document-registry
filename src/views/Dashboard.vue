@@ -1,12 +1,12 @@
 <template>
     <div class=" with-max-height">
         <div class="with-max-height-inner">
-<div class="row d-flex px-2">
+<!-- <div class="row d-flex px-2">
     <PageTitle page_name="Dashboard"/>
 </div>
-  
+   -->
 <div class="w-100 d-flex px-2">
-    <div class="vh-10 col-12 card no-border d-flex justify-content-center">
+    <div class="vh-10 col-12 card rounded-0 no-border d-flex justify-content-center">
         <div class="col-12 h-100 d-flex flex-column justify-contenter-center p-2">
             <div class="h-100 w-100 d-flex justify-content-center">
                 <div class="stat-card h-100 w-100 d-flex flex-no-wrap justify-content-center">
@@ -43,7 +43,7 @@
     <div class="vh-20 col-12 d-flex justify-content-center">
         <div class="col-12 h-100 d-flex flex-column justify-contenter-center p-2">
             <div class="h-100 w-100 d-flex justify-content-center">
-                <div class="stat-card card ms-2 no-border h-100 w-100 d-flex flex-no-wrap justify-content-center">
+                <div class="stat-card rounded-0  card ms-2 no-border h-100 w-100 d-flex flex-no-wrap justify-content-center">
                     <div class="img-holder h-100 w-100 d-flex flex-column justify-content-center">
                         <div class="bar-holder h-75 d-flex">
                             <div class="bar h-100 bg-primary"></div>
@@ -57,7 +57,7 @@
                     </div>
                 </div>
                 <!-- end card -->
-                <div class="stat-card card ms-2 no-border h-100 w-100 d-flex flex-no-wrap justify-content-center">
+                <div class="stat-card card rounded-0  ms-2 no-border h-100 w-100 d-flex flex-no-wrap justify-content-center">
                     <div class="img-holder h-100 w-100 d-flex flex-column justify-content-center">
                         <div class="bar-holder h-75 d-flex">
                             <div class="bar h-100 bg-success"></div>
@@ -71,7 +71,7 @@
                     </div>
                 </div>
                 <!-- end card -->
-                <div class="stat-card card ms-2 no-border h-100 w-100 d-flex flex-no-wrap justify-content-center">
+                <div class="stat-card rounded-0  card ms-2 no-border h-100 w-100 d-flex flex-no-wrap justify-content-center">
                     <div class="img-holder h-100 w-100 d-flex flex-column justify-content-center">
                         <div class="bar-holder h-75 d-flex">
                             <div class="bar h-50 bg-danger"></div>
@@ -93,7 +93,7 @@
 </div>
 <!-- graphs -->
 <div class="d-flex w-100 px-2 mt-2">
-    <div class="ms-2 px-2 bg-white w-100 row graphs d-flex flex-no-wrap">
+    <div class="ms-2 px-2 bg-white w-100 row rounded-0  graphs d-flex flex-no-wrap">
         <div class="col-6">
             <li class="text-dark px-2 custom-fw-bold f-13 sm-title mt-2">Request's Traffic</li>
             <Line :data="lineChartData" :options="lineChartOptions" />
@@ -108,7 +108,7 @@
 </div>
 </template>
 <script>
-import PageTitle from '@/components/titles/PageTitle.vue';
+// import PageTitle from '@/components/titles/PageTitle.vue';
 import { Line, Pie } from 'vue-chartjs'
 import {
   Chart as ChartJS,
@@ -137,7 +137,7 @@ ChartJS.register(
 
 export default{
     name: "UserDashboard",
-    components: { PageTitle, Line, Pie },
+    components: { /*PageTitle, */ Line, Pie },
   data() {
     return {
       // Existing line chart data

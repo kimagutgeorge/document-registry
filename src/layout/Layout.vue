@@ -4,7 +4,7 @@
       <!-- <div class="row col-10 h-100 d-flex no-align"> -->
       <div class="col-10">
         <TopBar @logout="logout"/>
-        <div class="page-body scrollable-page">
+        <div class="page-body scrollable-page mt-2">
           <router-view/>
         </div>
       </div>

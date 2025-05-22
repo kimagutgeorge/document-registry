@@ -1,6 +1,6 @@
 <template>
     <div class="custom-dropdown position-relative">
-      <span class="f-15 btn btn-primary" @click="toggleDropdown">
+      <span class="f-14 btn p-1 btn-primary" @click="toggleDropdown">
         Action <i class="fa-solid fa-angle-down"></i>
       </span>
       <transition name="slide-fade">
@@ -37,6 +37,7 @@
         activeDropdown: false,
         iconMappings: {
           view: 'fa-eye',
+          add: 'fa-plus',
           edit: 'fa-pen-to-square',
           return: 'fa-check',
           delete: 'fa-trash',

@@ -15,6 +15,8 @@ import AddUser from '@/views/AddUser.vue';
 import UserRoles  from '@/views/Roles.vue';
 import UserDepartments  from '@/views/Departments.vue';
 import UserProfile from '@/views/Profile.vue';
+import AllClients from '@/views/Clients.vue';
+import AddClient from '@/views/AddClient.vue';
 
 
 export default [
@@ -32,6 +34,18 @@ export default [
           path: '/home', 
           name: 'UserHome',
           component: UserDashboard,
+          meta: { requiresAuth: true }
+        },
+        {
+          path: '/clients',
+          name: 'Clients',
+          component: AllClients,
+          meta: { requiresAuth: true }
+        },
+        {
+          path: '/clients/add',
+          name: 'AddClients',
+          component: AddClient,
           meta: { requiresAuth: true }
         },
         {
